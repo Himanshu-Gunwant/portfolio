@@ -1,0 +1,500 @@
+@import url("https://fonts.cdnfonts.com/css/bdo-grotesk");
+* {
+  font-family: "BDO Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+.nav-main,
+.nav-alt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+.nav-main a,
+.nav-main a:link,
+.nav-main a:visited,
+.nav-main a:hover,
+.nav-main a:active {
+  color: #000000;
+  text-decoration: none;
+}
+.nav-main {
+  background-color: #fff9f0;
+}
+.nav-alt a,
+.nav-alt a:link,
+.nav-alt a:visited,
+.nav-alt a:hover,
+.nav-alt a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav-alt {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+.nav-alt.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  height: 60px;
+  background-color: #161616;
+}
+.nav-main.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+
+.right-nav-section {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+}
+.left-nav-section {
+  font-size: 15px;
+  margin-right: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+/* HOME */
+.home {
+  background-color: #fff9f0;
+  padding: 80px 70px 60px 70px;
+  min-height: 100vh;
+  width: 100%;
+}
+.hero-name {
+  font-size: 100px;
+  position: relative;
+}
+.firstname {
+  margin-top: 70px;
+}
+.lastname {
+  top: -60px;
+}
+.description-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  margin-top: 50px;
+}
+.description-main {
+  font-size: 24px;
+}
+.description-next {
+  color: oklch(0.446 0.03 256.802);
+}
+.description-next-inside2 {
+  margin-top: 20px;
+}
+
+.about {
+  background-color: #161616;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 120px;
+}
+.about-main-heading {
+  font-size: 100px;
+  color: oklch(0.551 0.027 264.364);
+}
+.about-paragraph {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+.about-paragraph-main {
+  color: white;
+  font-size: 32px;
+}
+.about-anime-image {
+  border-radius: 30px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.about-paragraph-next {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  color: white;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.work {
+  background-color: #161616;
+  color: white;
+  padding: 120px 120px 120px 120px;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+.work-main-section {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  margin-bottom: 120px;
+}
+.work-main-heading {
+  font-size: 100px;
+  color: oklch(0.551 0.027 264.364);
+}
+.work-description {
+  color: white;
+  font-size: 32px;
+  width: 90%;
+  margin-top: 20px;
+}
+.project-container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.work-done {
+  flex: 1;
+  padding-top: 200px;
+}
+.project {
+  color: white;
+  font-size: 50px;
+  display: block;
+}
+.project-number {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.project-description {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 18px;
+}
+
+.network {
+  background-color: #161616;
+  color: white;
+  padding: 200px 120px 120px 120px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+.network-container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.network-number {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.network-svg {
+  height: 50px;
+  color: white;
+}
+.networking-links {
+  flex: 1;
+  padding-top: 120px;
+}
+.Link-main {
+  color: white;
+  font-size: 50px;
+  padding-left: 20px;
+  display: block;
+}
+.network-description {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 18px;
+  padding-left: 20px;
+}
+.network-main {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+  padding-bottom: 120px;
+}
+.network-main-heading {
+  font-size: 100px;
+  font-weight: bold;
+  color: oklch(0.551 0.027 264.364);
+}
+.network-main-description {
+  font-size: 32px;
+}
+
+.contact-form {
+  background-color: #161616;
+  color: white;
+  min-height: 100vh;
+  padding: 200px 120px 120px 120px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+.contact-main {
+  flex: 1;
+}
+.contact-main-heading {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 70px;
+  font-weight: bold;
+}
+.contact-main-description {
+  color: white;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.contact-form-input {
+  display: flex;
+  flex: 1;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-input-name,
+.contact-input-email,
+.contact-input-message,
+.submit-button {
+  width: 390px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.contact-input-message {
+  height: 150px;
+}
+.submit-button:hover {
+  background-color: oklch(0.551 0.027 264.364);
+  transition: 0.3s;
+}
+.submit-button:active {
+  opacity: 0.4;
+  transition: 0.1s;
+}
+
+.footer-name {
+  font-size: 200px;
+  font-weight: bold;
+  background-color: #161616;
+  color: white;
+  padding: 0 30px;
+  line-height: 1;
+  overflow: hidden;
+}
+.footer-description {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2vh;
+  font-size: 18px;
+  background-color: #161616;
+  color: white;
+  height: 5vh;
+}
+
+@media (max-width: 1024px) {
+  .nav-main,
+  .nav-alt {
+    padding: 0 40px;
+  }
+
+  /* Padding for all main sections */
+  .home {
+    padding: 80px 40px 60px 40px;
+  }
+  .about,
+  .work,
+  .network,
+  .contact-form {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-name,
+  .about-main-heading,
+  .work-main-heading,
+  .network-main-heading {
+    font-size: 80px;
+  }
+  .project,
+  .Link-main {
+    font-size: 40px;
+  }
+  .contact-main-heading {
+    font-size: 60px;
+  }
+
+  .footer-name {
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-main,
+  .nav-alt {
+    padding: 0 20px;
+    height: 60px;
+  }
+  .right-nav-section {
+    display: none;
+  }
+
+  .home {
+    padding: 60px 20px 40px 20px;
+  }
+  .about,
+  .work,
+  .network,
+  .contact-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about,
+  .work,
+  .network,
+  .contact-form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-name {
+    font-size: 48px;
+  }
+  .firstname {
+    margin-top: 20px;
+  }
+  .lastname {
+    top: -15px;
+  }
+  .description-grid {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+  .description-main {
+    font-size: 20px;
+  }
+
+  .about-main-heading {
+    font-size: 48px;
+  }
+  .about-paragraph {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .about-paragraph-main {
+    font-size: 24px;
+  }
+  .about-anime-image {
+    margin-top: 30px;
+  }
+  .about-paragraph-next {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .work,
+  .network,
+  .contact-form {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .work-main-section,
+  .network-main {
+    position: static;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .work-done,
+  .networking-links {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .work-main-heading {
+    font-size: 48px;
+  }
+  .work-description {
+    font-size: 24px;
+    width: 100%;
+  }
+  .project {
+    font-size: 32px;
+  }
+
+  .network-main {
+    order: 1;
+  }
+  .networking-links {
+    order: 2;
+  }
+  .network-main-heading {
+    font-size: 48px;
+  }
+  .network-main-description {
+    font-size: 24px;
+  }
+  .Link-main {
+    font-size: 32px;
+    padding-left: 0;
+  }
+  .network-description {
+    padding-left: 0;
+  }
+
+  .contact-main-heading {
+    font-size: 40px;
+  }
+  .contact-main-description {
+    font-size: 20px;
+  }
+  .contact-form-input {
+    width: 100%;
+  }
+  .contact-input-name,
+  .contact-input-email,
+  .contact-input-message,
+  .submit-button {
+    width: 100%;
+  }
+
+  .footer-name {
+    font-size: 70px;
+    padding: 0 10px;
+    line-height: 0.9;
+  }
+  .footer-description {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 20px;
+    font-size: 14px;
+    gap: 8px;
+    text-align: center;
+  }
+}
