@@ -63,3 +63,57 @@ window.addEventListener("scroll", () => {
     navAlt.classList.remove("active");
   }
 });
+const cursor = document.getElementById('cursor-dot');
+
+let mouseX = 0;
+let mouseY = 0;
+
+let cursorX = 0;
+let cursorY = 0;
+
+const speed = 0.1;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    const distX = mouseX - cursorX;
+    const distY = mouseY - cursorY;
+    
+    cursorX = cursorX + (distX * speed);
+    cursorY = cursorY + (distY * speed);
+
+    cursor.style.left = `${cursorX}px`;
+    cursor.style.top = `${cursorY}px`;
+
+    requestAnimationFrame(animate);
+}
+const links = document.querySelectorAll('a, button');
+
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        cursor.style.width = '50px';
+        cursor.style.height = '50px';
+        cursor.textContent = 'view';
+    });
+    link.addEventListener('mouseleave', () => {
+        cursor.style.width = '12px';
+        cursor.style.height = '12px';
+        cursor.textContent = '';
+    });
+});
+animate();
+
+let seconds = 5;
+const countdownElement = document.getElementById('countdown');
+  const interval = setInterval(() => {
+    seconds--;
+    countdownElement.textContent = seconds;
+
+    if (seconds <= 0) {
+      clearInterval(interval);
+      window.location.href = "index.html#contact";
+    }
+}, 1000);

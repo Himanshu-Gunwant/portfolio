@@ -14,6 +14,27 @@ html {
 body {
   overflow-x: hidden;
 }
+#cursor-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%); 
+    transition: width 0.2s, height 0.2s, background-color 0.3s;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 .nav-main,
 .nav-alt {
@@ -182,6 +203,12 @@ body {
   color: white;
   font-size: 50px;
   display: block;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.project:hover {
+  color:#00ff00;
+  font-size: 55px;
 }
 .project-number {
   color: oklch(0.551 0.027 264.364);
@@ -327,6 +354,9 @@ body {
   .home {
     padding: 80px 40px 60px 40px;
   }
+  #cursor-dot{
+    display: none;
+  }
   .about,
   .work,
   .network,
@@ -344,6 +374,9 @@ body {
   .project,
   .Link-main {
     font-size: 40px;
+  }
+  .project:hover{
+    font-size: 45px;
   }
   .contact-main-heading {
     font-size: 60px;
@@ -366,6 +399,9 @@ body {
 
   .home {
     padding: 60px 20px 40px 20px;
+  }
+  #cursor-dot{
+    display: none;
   }
   .about,
   .work,
@@ -446,6 +482,9 @@ body {
   }
   .project {
     font-size: 32px;
+  }
+  .project:hover {
+    font-size: 37px;
   }
 
   .network-main {
