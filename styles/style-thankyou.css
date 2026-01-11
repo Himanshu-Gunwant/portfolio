@@ -1,39 +1,43 @@
 @import url("https://fonts.cdnfonts.com/css/bdo-grotesk");
+
 * {
   font-family: "BDO Grotesk", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
 }
 #cursor-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #00ff00;
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%); 
-    transition: width 0.2s, height 0.2s, background-color 0.3s;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
+  width: 12px;
+  height: 12px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.3s;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .home {
   background-color: #161616;
@@ -41,17 +45,25 @@ body {
   min-height: 100vh;
   width: 100%;
 }
+
 .hero-name {
   color: white;
-  font-size: 100px;
+  font-size: clamp(50px, 10vw, 100px); 
   position: relative;
+  line-height: 1.1;
+    white-space: nowrap;
 }
+
 .firstname {
   margin-top: 70px;
+  display: block;
 }
+
 .lastname {
-  top: -50px;
+  position: relative;
+  top: -20px; 
 }
+
 .description-grid {
   color: white;
   display: grid;
@@ -59,36 +71,93 @@ body {
   column-gap: 50px;
   margin-top: 50px;
 }
+
 .description-main {
   font-size: 24px;
+  line-height: 1.5;
 }
-#appreciate{
-        color: #00ff00;
+
+#appreciate {
+  color: #00ff00;
 }
+
 .description-next {
   color: oklch(64.064% 0.02674 259.85);
+  font-size: 18px;
 }
+
 .description-next-inside2 {
   margin-top: 20px;
 }
-.redirect-box{
-    color: white;
-    padding-top: 40px;
+
+.redirect-box {
+  color: white;
+  padding-top: 40px;
 }
-.counter{
-    margin-bottom: 20px;
+
+.counter {
+  margin-bottom: 20px;
 }
-#countdown{
-    color: #00ff00;
+
+#countdown {
+  color: #00ff00;
 }
-.btn-primary{
-    color: white;
-    padding: 10px 25px;
-    margin-top: 50px;
-    background-color: oklch(64.064% 0.02674 259.85);
-    border-radius: 10px;
-    transition: 0.3s;
+
+.btn-primary {
+  color: white;
+  padding: 10px 25px;
+  margin-top: 50px;
+  background-color: oklch(64.064% 0.02674 259.85);
+  border-radius: 10px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
 }
-.btn-primary:hover{
-    background-color: #00ff00;
+
+.btn-primary:hover {
+  background-color: #00ff00;
+  color: #161616;
+}
+
+
+@media (max-width: 900px) {
+  .home {
+    padding: 60px 30px;
+  }
+  
+  .description-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .lastname {
+    top: -10px;
+  }
+  #cursor-dot {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 40px 20px;
+  }
+
+  .firstname {
+    margin-top: 40px;
+  }
+
+  .description-main {
+    font-size: 18px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+  #cursor-dot {
+    display: none;
+  }
 }
